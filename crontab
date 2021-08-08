@@ -1,0 +1,3 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+0 1 * * * root source /app/env.sh && node /app/cron.js > /proc/$(cat /var/run/crond.pid)/fd/1 2>&1

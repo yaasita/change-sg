@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title add ip to sg
+  body
+    h1 あなたのIPをセキュリティグループへ追加しました
+    p= "IPアドレス: " + ip
+    p= "ユーザ: " + user
+    h2 手動で登録する
+    form(action="./" method="post")
+      p
+        label(for="ipaddress") IPアドレス入力(例: 203.0.113.0/24 or 2001:db8::/32) 
+        input(type="text" name="ipaddress" id="ipaddress")
+      p
+        input(type="submit" value="登録")
